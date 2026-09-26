@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yazılım | Digital Akış</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b14;
+    color: white;
+    line-height: 1.6;
+}
+
+/* ÜST MENÜ */
+
+header {
+    background: rgba(8, 11, 20, 0.95);
+    border-bottom: 1px solid #1d2638;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.home {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home:hover {
+    color: #8b83ff;
+}
+
+/* BAŞLIK */
+
+.hero {
+    padding: 100px 20px 70px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 20%, #26215e 0%, transparent 35%),
+        #080b14;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #373064;
+    background: #151329;
+    border-radius: 50px;
+    color: #aaa5ff;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #8b83ff, #48c6ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #9ca7ba;
+    font-size: 18px;
+}
+
+/* KATEGORİLER */
+
+.content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 25px 100px;
+}
+
+.title {
+    margin-bottom: 35px;
+}
+
+.title h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.title p {
+    color: #8993a7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: #0f1420;
+    border: 1px solid #20293a;
+    padding: 30px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #6c63ff;
+    background: #121827;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    background: #1a1837;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #8993a7;
+    font-size: 14px;
+}
+
+.arrow {
+    display: block;
+    margin-top: 20px;
+    color: #8b83ff;
+    font-weight: bold;
+}
+
+/* ALT */
+
+footer {
+    text-align: center;
+    border-top: 1px solid #1c2432;
+    padding: 30px 20px;
+    color: #697386;
+    font-size: 14px;
+}
+
+@media(max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+    <a href="index.html" class="logo">
+        Digital<span>Akış</span>
+    </a>
+
+    <a href="index.html" class="home">
+        ← Ana Sayfa
+    </a>
+
+</nav>
+</header>
+
+
+<section class="hero">
+
+    <div class="badge">
+        💻 Digital Akış Eğitim
+    </div>
+
+    <h1>
+        <span>Yazılım</span> Öğren
+    </h1>
+
+    <p>
+        Programlama dünyasını adım adım keşfet.
+        İlgilendiğin alanı seç ve öğrenmeye başla.
+    </p>
+
+</section>
+
+
+<main class="content">
+
+<div class="title">
+
+    <h2>Yazılım Konuları</h2>
+
+    <p>
+        Öğrenmek istediğin kategoriyi seç.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+    <a href="#" class="card">
+
+        <div class="icon">🐍</div>
+
+        <h3>Python</h3>
+
+        <p>
+            Python programlamaya sıfırdan başla ve
+            temel programlama mantığını öğren.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+
+    <a href="#" class="card">
+
+        <div class="icon">🌐</div>
+
+        <h3>Web Programlama</h3>
+
+        <p>
+            HTML, CSS ve web teknolojilerinin
+            temel yapılarını keşfet.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+
+    <a href="#" class="card">
+
+        <div class="icon">🧩</div>
+
+        <h3>Nesne Tabanlı Programlama</h3>
+
+        <p>
+            Sınıflar, nesneler, metotlar ve
+            OOP mantığını öğren.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+
+    <a href="#" class="card">
+
+        <div class="icon">🗄️</div>
+
+        <h3>Veritabanı</h3>
+
+        <p>
+            Veritabanı yapısını ve temel SQL
+            kavramlarını öğren.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+
+    <a href="#" class="card">
+
+        <div class="icon">🖥️</div>
+
+        <h3>Görsel Programlama</h3>
+
+        <p>
+            Arayüz geliştirme ve görsel programlama
+            temellerini keşfet.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+
+    <a href="#" class="card">
+
+        <div class="icon">⚡</div>
+
+        <h3>Programlama Temelleri</h3>
+
+        <p>
+            Değişkenler, koşullar, döngüler ve
+            algoritmalarla temelden başla.
+        </p>
+
+        <span class="arrow">Konulara Git →</span>
+
+    </a>
+
+</div>
+
+</main>
+
+
+<footer>
+    © 2026 Digital Akış • Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>
