@@ -1,31 +1,386 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Akış</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Akış | Yazılım, Teknoloji ve Eğitim</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b14;
+    color: white;
+    line-height: 1.6;
+}
+
+/* ÜST MENÜ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 11, 20, 0.95);
+    border-bottom: 1px solid #1d2638;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #8b83ff;
+}
+
+/* ANA BÖLÜM */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        radial-gradient(circle at 50% 20%, #26215e 0%, transparent 35%),
+        #080b14;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #373064;
+    background: #151329;
+    border-radius: 50px;
+    color: #aaa5ff;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #8b83ff, #48c6ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #aab3c5;
+    font-size: 19px;
+    max-width: 680px;
+    margin: 0 auto 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 27px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #7c74ff;
+}
+
+/* İÇERİK */
+
+.content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #8993a7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #0f1420;
+    border: 1px solid #20293a;
+    padding: 32px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #6c63ff;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1837;
+    border-radius: 13px;
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #8993a7;
+    font-size: 15px;
+}
+
+/* ALT BÖLÜM */
+
+.about {
+    background: #0d111b;
+    padding: 85px 20px;
+    text-align: center;
+}
+
+.about div {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.about p {
+    color: #929caf;
+}
+
+footer {
+    border-top: 1px solid #1c2432;
+    text-align: center;
+    padding: 30px 20px;
+    color: #697386;
+    font-size: 14px;
+}
+
+/* TELEFON */
+
+@media (max-width: 750px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Digital Akış</h1>
+<header>
+<nav>
 
-    <h2>Web sitemize hoş geldiniz 🚀</h2>
+    <div class="logo">
+        Digital<span>Akış</span>
+    </div>
+
+    <div class="menu">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#icerikler">İçerikler</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+    </div>
+
+</nav>
+</header>
+
+
+<section class="hero" id="anasayfa">
+
+<div class="hero-content">
+
+    <div class="badge">
+        💻 Teknoloji • Yazılım • Eğitim
+    </div>
+
+    <h1>
+        Dijital dünyayı<br>
+        <span class="gradient-text">birlikte keşfet.</span>
+    </h1>
 
     <p>
-        Yazılım, teknoloji ve eğitim içeriklerini keşfet.
+        Yazılım, teknoloji ve eğitim içeriklerini sade,
+        anlaşılır ve erişilebilir bir şekilde keşfet.
     </p>
 
-    <hr>
+    <a href="#icerikler" class="button">
+        İçerikleri Keşfet →
+    </a>
 
-    <h2>💻 Yazılım</h2>
-    <p>Programlama ve teknoloji içerikleri.</p>
+</div>
 
-    <h2>📚 Ders Notları</h2>
-    <p>Konu anlatımları ve ders notları.</p>
+</section>
 
-    <h2>🎯 Testler</h2>
-    <p>Kendini test edebileceğin sorular.</p>
+
+<section class="content" id="icerikler">
+
+<div class="section-title">
+
+    <h2>Neler Bulabilirsin?</h2>
+
+    <p>
+        Öğrenmeyi daha kolay hale getiren içerikler.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="icon">💻</div>
+
+        <h3>Yazılım</h3>
+
+        <p>
+            Programlama, web geliştirme ve teknoloji
+            hakkında anlaşılır içerikler.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">📚</div>
+
+        <h3>Ders Notları</h3>
+
+        <p>
+            Konuları daha hızlı öğrenebilmen için
+            hazırlanmış sade ve düzenli ders notları.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">🎯</div>
+
+        <h3>Testler</h3>
+
+        <p>
+            Öğrendiklerini pekiştirebileceğin
+            soru ve test içerikleri.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="hakkimizda">
+
+<div>
+
+    <h2>Digital Akış</h2>
+
+    <p>
+        Teknoloji ve eğitimi daha anlaşılır hale getirmek
+        için hazırlanmış dijital içerik platformu.
+        Yeni içeriklerle sürekli gelişmeye devam ediyor.
+    </p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Digital Akış • Tüm hakları saklıdır.
+
+</footer>
 
 </body>
 </html>
