@@ -132,7 +132,7 @@ nav {
     background: #7c74ff;
 }
 
-/* İÇERİK */
+/* İÇERİKLER */
 
 .content {
     max-width: 1150px;
@@ -195,7 +195,109 @@ nav {
     font-size: 15px;
 }
 
-/* ALT BÖLÜM */
+/* SOSYAL MEDYA */
+
+.social-section {
+    padding: 90px 25px;
+    background: #0b0f19;
+}
+
+.social-container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.social-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.social-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.social-title p {
+    color: #8993a7;
+}
+
+.social-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.social-card {
+    padding: 32px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+}
+
+.social-icon {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.social-card h3 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.social-card .username {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 25px;
+}
+
+.social-action {
+    font-weight: bold;
+}
+
+/* INSTAGRAM */
+
+.instagram {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d
+    );
+}
+
+/* YOUTUBE */
+
+.youtube {
+    background: linear-gradient(
+        135deg,
+        #ff0000,
+        #a90000
+    );
+}
+
+/* TIKTOK */
+
+.tiktok {
+    background: linear-gradient(
+        135deg,
+        #111111,
+        #202020
+    );
+    border: 1px solid #3b3b3b;
+}
+
+.tiktok:hover {
+    border-color: #25f4ee;
+}
+
+/* HAKKIMIZDA */
 
 .about {
     background: #0d111b;
@@ -216,6 +318,8 @@ nav {
 .about p {
     color: #929caf;
 }
+
+/* FOOTER */
 
 footer {
     border-top: 1px solid #1c2432;
@@ -241,14 +345,17 @@ footer {
         min-height: 520px;
     }
 
-    .cards {
+    .cards,
+    .social-cards {
         grid-template-columns: 1fr;
     }
 
-    .section-title h2 {
+    .section-title h2,
+    .social-title h2 {
         font-size: 29px;
     }
 }
+
 </style>
 </head>
 
@@ -264,6 +371,7 @@ footer {
     <div class="menu">
         <a href="#anasayfa">Ana Sayfa</a>
         <a href="#icerikler">İçerikler</a>
+        <a href="#sosyalmedya">Sosyal Medya</a>
         <a href="#hakkimizda">Hakkımızda</a>
     </div>
 
@@ -310,7 +418,6 @@ footer {
 
 </div>
 
-
 <div class="cards">
 
     <div class="card">
@@ -326,7 +433,6 @@ footer {
 
     </div>
 
-
     <div class="card">
 
         <div class="icon">📚</div>
@@ -340,7 +446,6 @@ footer {
 
     </div>
 
-
     <div class="card">
 
         <div class="icon">🎯</div>
@@ -351,6 +456,100 @@ footer {
             Öğrendiklerini pekiştirebileceğin
             soru ve test içerikleri.
         </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SOSYAL MEDYA -->
+
+<section class="social-section" id="sosyalmedya">
+
+<div class="social-container">
+
+    <div class="social-title">
+
+        <h2>Bizi Sosyal Medyada Takip Et 🚀</h2>
+
+        <p>
+            Yeni içerikleri kaçırmamak için Digital Akış'a katıl.
+        </p>
+
+    </div>
+
+
+    <div class="social-cards">
+
+        <!-- INSTAGRAM -->
+
+        <a
+        href="https://www.instagram.com/digitalflow110/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card instagram">
+
+            <div class="social-icon">📸</div>
+
+            <h3>Instagram</h3>
+
+            <div class="username">
+                @digitalflow110
+            </div>
+
+            <div class="social-action">
+                Takip Et →
+            </div>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+        href="https://www.youtube.com/@DigitalFlow110"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card youtube">
+
+            <div class="social-icon">▶</div>
+
+            <h3>YouTube</h3>
+
+            <div class="username">
+                @DigitalFlow110
+            </div>
+
+            <div class="social-action">
+                Abone Ol →
+            </div>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+        href="https://www.tiktok.com/@digitalflow110"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card tiktok">
+
+            <div class="social-icon">♪</div>
+
+            <h3>TikTok</h3>
+
+            <div class="username">
+                @digitalflow110
+            </div>
+
+            <div class="social-action">
+                Takip Et →
+            </div>
+
+        </a>
 
     </div>
 
@@ -377,9 +576,7 @@ footer {
 
 
 <footer>
-
     © 2026 Digital Akış • Tüm hakları saklıdır.
-
 </footer>
 
 </body>
